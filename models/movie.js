@@ -1,10 +1,7 @@
 const { Schema, model } = require('mongoose');
 const validator = require('validator');
 
-const {
-  MSG_REQUIRED_FIELD,
-  MSG_INCORRECT_URL,
-} = require('../utils/constants');
+const { MSG_REQUIRED_FIELD, MSG_INCORRECT_URL } = require('../utils/constants');
 
 const movieSchema = new Schema(
   {
