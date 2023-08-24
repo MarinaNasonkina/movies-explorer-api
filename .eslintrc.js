@@ -3,5 +3,6 @@ module.exports = {
   rules: {
     'no-underscore-dangle': ['error', { allow: ['_id'] }],
     'func-names': ['error', 'never'],
+    'no-useless-escape': 'off',
   },
 };

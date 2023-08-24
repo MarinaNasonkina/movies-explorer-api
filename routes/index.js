@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
 const auth = require('../middlewares/auth');
+const { validateUser, validateAuthData } = require('../middlewares/validation-joi');
 
 const { createUser, login, logout } = require('../controllers/auth');
 const notFound = require('../controllers/not-found');
@@ -8,8 +9,8 @@ const notFound = require('../controllers/not-found');
 const users = require('./users');
 const movies = require('./movies');
 
-router.post('/signup', createUser);
-router.post('/signin', login);
+router.post('/signup', validateUser, createUser);
+router.post('/signin', validateAuthData, login);
 
 router.use(auth);
 router.post('/logout', logout);
