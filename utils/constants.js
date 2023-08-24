@@ -21,6 +21,7 @@ const MSG_SUCCESS_EXIT = 'Выход прошел успешно';
 const MSG_USER_EXISTS = 'Пользователь с таким email уже зарегистрирован';
 const MSG_USER_NOT_FOUND = 'Запрашиваемый пользователь не найден';
 const MSG_WRONG_USER_DATA = 'Неправильные почта или пароль';
+const MSG_WRONG_DATA = 'Переданы некорректные данные';
 
 module.exports = {
   CODE_CREATED,
@@ -45,4 +46,5 @@ module.exports = {
   MSG_USER_EXISTS,
   MSG_USER_NOT_FOUND,
   MSG_WRONG_USER_DATA,
+  MSG_WRONG_DATA,
 };

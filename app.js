@@ -9,11 +9,13 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const limiter = require('./middlewares/limiter');
 const centralErrHandler = require('./middlewares/central-err-handler');
 
+const router = require('./routes');
+
 const {
-  PORT,
   DB_URL,
-  corsOptions,
   mongooseOptions,
+  corsOptions,
+  PORT,
 } = require('./utils/config');
 
 const app = express();
@@ -22,13 +24,14 @@ mongoose.connect(DB_URL, mongooseOptions);
 
 app.use(express.json());
 app.use(cookieParser());
-
 app.use(helmet());
 app.use(cors(corsOptions));
 
 app.use(requestLogger);
 
 app.use(limiter);
+
+app.use(router);
 
 app.use(errorLogger);
 

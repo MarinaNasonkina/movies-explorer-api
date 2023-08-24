@@ -38,7 +38,7 @@ const userSchema = new Schema(
   { versionKey: false },
 );
 
-userSchema.statics.findUserByCredentials = function (email, password) {
+userSchema.statics.findByCredentials = function (email, password) {
   return this.findOne({ email })
     .select('+password')
     .orFail()
