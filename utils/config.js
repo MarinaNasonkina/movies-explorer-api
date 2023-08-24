@@ -8,7 +8,11 @@ const {
 
 const JWT_SECRET = NODE_ENV === 'production' ? process.env.JWT_SECRET : 'dev-secret-key';
 
-const allowedCors = ['http://localhost:3000'];
+const allowedCors = [
+  'https://mn-movies-explorer.nomoredomainsicu.ru',
+  'http://mn-movies-explorer.nomoredomainsicu.ru',
+  'http://localhost:3000',
+];
 
 const corsOptions = { origin: allowedCors, credentials: true };
 

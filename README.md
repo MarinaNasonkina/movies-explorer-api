@@ -4,9 +4,9 @@
 
 ## Ссылки на проект в сети (backend)
 
-IP x.x.x.x
+IP 84.201.159.19
 
-Backend <https://api.x.nomoreparties.co>
+Backend <https://api.mn-movies-explorer.nomoredomainsicu.ru>
 
 ## Описание проекта
 
