@@ -51,7 +51,7 @@ function deleteMovie(req, res, next) {
         throw new ForbiddenError(MSG_FORBIDDEN_DELETION);
       }
 
-      Movie.deleteOne(movie)
+      return Movie.deleteOne(movie)
         .then(() => res.send({ message: MSG_SUCCESS_DELETION }));
     })
     .catch((err) => {
