@@ -27,10 +27,23 @@ function createUser(req, res, next) {
       password: hash,
       name,
     }))
-    .then(() => res.status(CODE_CREATED).send({
-      email,
-      name,
-    }))
+    .then((user) => {
+      const token = jwt.sign({ _id: user._id }, JWT_SECRET, {
+        expiresIn: '7d',
+      });
+
+      res.cookie('token', token, {
+        maxAge: 3600000 * 24 * 7,
+        httpOnly: true,
+        sameSite: true,
+      });
+
+      res.status(CODE_CREATED).send({
+        email,
+        name,
+        _id: user._id,
+      });
+    })
     .catch((err) => {
       if (err instanceof ValidationError) {
         next(new BadRequestError(MSG_WRONG_DATA));
@@ -56,7 +69,12 @@ function login(req, res, next) {
         httpOnly: true,
         sameSite: true,
       });
-      res.send({ token });
+
+      res.send({
+        email,
+        name: user.name,
+        _id: user._id,
+      });
     })
     .catch((err) => {
       if (err instanceof DocumentNotFoundError) {

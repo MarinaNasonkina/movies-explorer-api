@@ -23,7 +23,7 @@ const MSG_USER_NOT_FOUND = 'Запрашиваемый пользователь 
 const MSG_WRONG_USER_DATA = 'Неправильные почта или пароль';
 const MSG_WRONG_DATA = 'Переданы некорректные данные';
 
-const regexLink = /https?:\/\/(www\.)?[\w\-\.]+(ru|com|net)[\w\-\.~:\/?#\[\]@!;&'\(\)*\+,;=]*/;
+const regexLink = /https?:\/\/(www\.)?[\w\-\.]+(ru|com|co|net)[\w\-\.~:\/?#\[\]@!;&'\(\)*\+,;=]*/;
 
 module.exports = {
   CODE_CREATED,
