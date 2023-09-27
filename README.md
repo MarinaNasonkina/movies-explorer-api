@@ -4,7 +4,7 @@
 
 ## Ссылки на проект в сети (backend)
 
-IP 84.201.159.19
+IP 158.160.54.130
 
 Backend <https://api.mn-movies-explorer.nomoredomainsicu.ru>
 
