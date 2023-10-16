@@ -2,12 +2,6 @@
 
 **Movies-explorer - сервис, зарегистрировавшись в котором, можно найти фильмы по запросу и сохранить в личном кабинете.**
 
-## Ссылки на проект в сети (backend)
-
-IP 158.160.54.130
-
-Backend <https://api.mn-movies-explorer.nomoredomainsicu.ru>
-
 ## Описание проекта
 
 Данный проект является дипломной работой курса [«Веб-разработчик»](https://practicum.yandex.ru/web/) от Яндекс.Практикум.
@@ -42,3 +36,9 @@ Backend <https://api.mn-movies-explorer.nomoredomainsicu.ru>
 `npm run start` — запускает сервер
 
 `npm run dev` — запускает сервер с hot-reload
+
+## Ссылки на проект в сети _(приостановлено)_
+
+IP 158.160.54.130
+
+Backend <https://api.mn-movies-explorer.nomoredomainsicu.ru>
